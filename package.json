@@ -1,11 +1,11 @@
 {
-  "name": "life-of-cube",
+  "name": "cube-transform",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/TomHsiao1260/cube-transform.git",
   "author": "Hsiao Yao <tomtogo1260@gmail.com>",
   "license": "MIT",
-  "homepage": "https://tomhsiao1260.github.io/life-of-cube/",
+  "homepage": "https://tomhsiao1260.github.io/cube-transform/",
   "scripts": {
     "build": "webpack --config ./bundler/webpack.prod.js",
     "dev": "webpack serve --config ./bundler/webpack.dev.js",
