@@ -82,6 +82,8 @@ window.addEventListener('touchstart', (event) => {
 
 // Animate
 const clock = new THREE.Clock()
+
+const origin = new THREE.Vector3()
 let velocity = new THREE.Vector3()
 
 const tick = () =>
@@ -95,7 +97,7 @@ const tick = () =>
     // Calculate the displacement vector between the cube and the final location
     const xDelta = camera.position.clone()
                                   .add( ray.normalize() )
-                                  .sub( new THREE.Vector3() )
+                                  .sub( origin )
                                   .normalize()
                                   .multiplyScalar( parameters.radius )
                                   .sub( cube.position )
