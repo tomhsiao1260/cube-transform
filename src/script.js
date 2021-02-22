@@ -58,12 +58,12 @@ const parameters = {
     radius: 1.0,
     moveSpeed: 0.01,
     damping: 0.1,
-    tile: 10,
+    tilt: 10,
 }
 
 gui.add(parameters, 'moveSpeed').min(0.01).max(0.1).step(0.01)
 gui.add(parameters, 'damping').min(0).max(1).step(0.01)
-gui.add(parameters, 'tile').min(0).max(10).step(0.1)
+gui.add(parameters, 'tilt').min(0).max(10).step(0.1)
 
 // Raycaster
 const raycaster = new THREE.Raycaster()
@@ -117,7 +117,7 @@ const tick = () =>
     cube.position.add( velocity )
 
     // Tilt the cube
-    const {x, y, z} = velocity.clone().multiplyScalar( parameters.tile )
+    const {x, y, z} = velocity.clone().multiplyScalar( parameters.tilt )
     cube.rotation.set(-z, x, y)
 
     // Render
